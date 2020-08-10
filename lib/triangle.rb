@@ -17,6 +17,7 @@ class Triangle
     end
   end
 end
+
   def validate_triangle
     real_triangle = [(sa + sb > sc), (sa + sc > sb), (sb + sc > sa)]
     [sa, sb, sc].each do |side|
@@ -27,6 +28,5 @@ end
 
   class TriangleError < StandardError
   end
-
 end
 end
