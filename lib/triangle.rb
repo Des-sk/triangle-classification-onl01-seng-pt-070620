@@ -1,16 +1,16 @@
 class Triangle
-  attr_reader :a, :b, :c
-  def initialize(a, b, c)
-    @a = a
-    @b = b
-    @c = c
+  attr_reader :sa, :sb, :sc
+  def initialize(sa, sb, sc)
+    @sa = sa
+    @sb = sb
+    @sc = sc
   end
   
     def kind
     validate_triangle
-    if a == b && b == c
+    if sa == sb && sb == sc
       :equilateral
-    elsif a == b || b == c || a == c
+    elsif sa == sb || sb == sc || sa == sc
       :isosceles
     else
       :scalene
