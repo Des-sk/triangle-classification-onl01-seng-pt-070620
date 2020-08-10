@@ -5,8 +5,8 @@ class Triangle
     @sb = sb
     @sc = sc
   end
-  
-    def kind
+
+  def kind
     validate_triangle
     if sa == sb && sb == sc
       :equilateral
@@ -16,7 +16,6 @@ class Triangle
       :scalene
     end
   end
-end
 
   def validate_triangle
     real_triangle = [(sa + sb > sc), (sa + sc > sb), (sb + sc > sa)]
@@ -27,4 +26,6 @@ end
   end
 
   class TriangleError < StandardError
+  end
+
 end
